@@ -1,0 +1,2 @@
+# QtLib
+buildet qt dependense
