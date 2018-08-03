@@ -2,3 +2,11 @@
 installer/installerApp
 
 *.user
+
+deploy/Makefile
+
+example/build/release/bin/
+
+*.o
+
+example/build/release/res/

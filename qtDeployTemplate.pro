@@ -1,4 +1,6 @@
 TEMPLATE = subdirs
 CONFIG+=ordered
 
-SUBDIRS += installer
+SUBDIRS += installer \
+           deploy \
+           example
