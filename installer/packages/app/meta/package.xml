@@ -7,9 +7,6 @@
     <Script>installscript.js</Script>
     <ReleaseDate>2018-08-25</ReleaseDate>
     <SortingPriority>200</SortingPriority>
-    <UserInterfaces>
-        <UserInterface>targetwidget.ui</UserInterface>
-    </UserInterfaces>
     <Translations>
         <Translation>ru.qm</Translation>
     </Translations>
