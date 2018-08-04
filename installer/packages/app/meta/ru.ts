@@ -15,14 +15,12 @@
 <context>
     <name>installscript</name>
     <message>
-        <location filename="installscript.js" line="9"/>
         <source>Virtus Rlo Images</source>
-        <translation>Изображения Virtus ИВС</translation>
+        <translation type="vanished">Изображения Virtus ИВС</translation>
     </message>
     <message>
-        <location filename="installscript.js" line="10"/>
         <source>This package contains images for the sidebar of the rolo mode</source>
-        <translation>Этот пакет содержит изображения для боковой панели режима ИВС</translation>
+        <translation type="vanished">Этот пакет содержит изображения для боковой панели режима ИВС</translation>
     </message>
     <message>
         <source>Choose your target directory.</source>
@@ -31,6 +29,16 @@
     <message>
         <source>Attention! This directory is already taken, to continue the installation, select another directory!</source>
         <translation type="vanished">Внимание! Этот каталог уже создан, чтобы продолжить установку выберите другой каталог!</translation>
+    </message>
+    <message>
+        <location filename="installscript.js" line="9"/>
+        <source>App</source>
+        <translation>Основные компоненнты</translation>
+    </message>
+    <message>
+        <location filename="installscript.js" line="10"/>
+        <source>Install App</source>
+        <translation>установка основного компонента</translation>
     </message>
 </context>
 </TS>

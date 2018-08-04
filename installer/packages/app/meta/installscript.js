@@ -6,8 +6,8 @@ function Component()
 }
 
 function generateTr() {
-    component.setValue("DisplayName", qsTr("Virtus Rlo Images"));
-    component.setValue("Description", qsTr("This package contains images for the sidebar of the rolo mode"));
+    component.setValue("DisplayName", qsTr("App"));
+    component.setValue("Description", qsTr("Install App"));
 
 }
 

@@ -10,6 +10,7 @@
 *.dll
 *.dylib
 *_qml.cpp
+*.AppImage
 
 # Qt-es
 object_script.*.Release
@@ -30,6 +31,7 @@ ui_*.h
 *.jsc
 Makefile*
 *build-*
+installer/packages/app/data/*
 
 # Qt unit tests
 target_wrapper.*

@@ -15,9 +15,9 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 
 CONFIG(debug, debug|release): {
-    OUTPUT_DIR = "$$PWD/build/debug/"
+    OUTPUT_DIR = "$$PWD/build/debug"
 } else: {
-    OUTPUT_DIR = "$$PWD/build/release/"
+    OUTPUT_DIR = "$$PWD/build/release"
 }
 
 UI_DIR      = "$$OUTPUT_DIR/ui/"
@@ -43,5 +43,5 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 include($$PWD/../deploy/deployFiles.pri)
-include($$PWD/../deploy/deploy.pri)
 
+message( DEPLOY_FILES = $$DEPLOY_FILES)
