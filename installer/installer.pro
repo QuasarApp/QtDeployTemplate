@@ -42,13 +42,12 @@ win32 {
 }
 
 unix {
-    installerApp.commands += $$LINUXDEPLOY  /media/andrei/D/QtLib/deploy/../installer/packages/app/data/example -qmldir=$$QML_DIR -qmake=$$QMAKE_QMAKE -verbose=3 &&
+    installerApp.commands += $$LINUXDEPLOY $$DEPLOY_FILES -qmldir=$$QML_DIR -qmake=$$QMAKE_QMAKE -verbose=2 &&
 }
 
 mac {
-    installerApp.commands += $$MACDEPLY --qmldir $$QML_DIR * &&
+    installerApp.commands += $$MACDEPLY --qmldir $$QML_DIR $$DEPLOY_FILES &&
 }
-
 
 installerApp.commands += $$QT_DIR/../../../Tools/QtInstallerFramework/3.0/bin/binarycreator --offline-only -c $$PWD/config/config.xml -p $$PWD/packages $$PWD/$$OUT_FILE --verbose
 installerApp.CONFIG += target_predeps no_link combine
