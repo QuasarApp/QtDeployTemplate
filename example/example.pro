@@ -43,3 +43,5 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 include($$PWD/../deploy/deployFiles.pri)
+include($$PWD/../deploy/deploy.pri)
+

@@ -1,4 +1,3 @@
-TEMPLATE = aux
 
 QT_DIR = $$dirname(QMAKE_QMAKE)
 QML_DIR = $$QT_DIR/../qml
