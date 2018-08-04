@@ -39,14 +39,21 @@ message( DEPLOY_FILES = $$DEPLOY_FILES)
 # todo get inpot files
 win32 {
     installerApp.commands += $$WINDEPLY --qmldir $$QML_DIR * &&
+    commands += "rd  /s /q  $$PWD/packages/app/data"
+
 }
 
 unix {
-    installerApp.commands += $$LINUXDEPLOY $$DEPLOY_FILES -qmldir=$$QML_DIR -qmake=$$QMAKE_QMAKE -verbose=2 &&
+    installerApp.commands += $$LINUXDEPLOY $$PWD/packages/app/data/* -qmldir=$$QML_DIR -qmake=$$QMAKE_QMAKE -verbose=2 &&
+
+    commands += "rm -rdf $$PWD/packages/app/data"
+
 }
 
 mac {
     installerApp.commands += $$MACDEPLY --qmldir $$QML_DIR $$DEPLOY_FILES &&
+    commands += "rm -rdf  $$PWD/packages/app/data"
+
 }
 
 installerApp.commands += $$QT_DIR/../../../Tools/QtInstallerFramework/3.0/bin/binarycreator --offline-only -c $$PWD/config/config.xml -p $$PWD/packages $$PWD/$$OUT_FILE --verbose
@@ -61,6 +68,7 @@ commands += "chmod +x $$LINUXDEPLOY"
 for(command, commands) {
     system($$command)|error("Failed to run: $$command")
 }
+
 
 QMAKE_EXTRA_COMPILERS += installerApp
 
