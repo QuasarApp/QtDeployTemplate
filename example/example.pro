@@ -42,6 +42,6 @@ qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
-include($$PWD/../deploy/deployFiles.pri)
+include($$PWD/../installer/deploy/deployFiles.pri)
 
 message( DEPLOY_FILES = $$DEPLOY_FILES)

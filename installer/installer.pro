@@ -18,7 +18,7 @@ QML_DIR = $$QT_DIR/../qml
 
 WINDEPLY = $$QT_DIR/windeployqt.exe
 MACDEPLY = $$QT_DIR/macdeployqt
-LINUXDEPLOY = $$PWD/linuxdeployqt-continuous-x86_64.AppImage
+LINUXDEPLOY = $$PWD/deploy/linuxdeployqt-continuous-x86_64.AppImage
 
 message( QML_DIR = $$QML_DIR)
 message( WINDEPLY = $$WINDEPLY)
