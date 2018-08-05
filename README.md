@@ -2,7 +2,7 @@
 * This is the qmake project template for deploying projects using qt libraries.
 * The template supports qt installframework and can work with projects with several binary files and bibiliotekami.
 
-##example 
+## example 
 1. You must persuade the project
  - git clone https://github.com/QuasarApp/QtDeployTemplate.git 
 2. Go to the project
