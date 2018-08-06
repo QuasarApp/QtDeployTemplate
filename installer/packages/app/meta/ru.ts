@@ -31,12 +31,12 @@
         <translation type="vanished">Внимание! Этот каталог уже создан, чтобы продолжить установку выберите другой каталог!</translation>
     </message>
     <message>
-        <location filename="installscript.js" line="9"/>
+        <location filename="installscript.js" line="59"/>
         <source>App</source>
         <translation>Основные компоненнты</translation>
     </message>
     <message>
-        <location filename="installscript.js" line="10"/>
+        <location filename="installscript.js" line="60"/>
         <source>Install App</source>
         <translation>установка основного компонента</translation>
     </message>
