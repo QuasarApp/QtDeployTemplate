@@ -10,7 +10,7 @@
 3. Create your qmake project
  - mkdir example
  - gedit example.pro 
- ``` qmake
+ ```qmake
 QT += quick
 CONFIG += c++11
 
@@ -41,7 +41,7 @@ include($$PWD/../installer/deploy/deployFiles.pri) # this we added module of ins
 
 message( DEPLOY_FILES = $$DEPLOY_FILES)
 
- ```
+```
 
 4. If you need to build a ready installer, then before installing, make sure to run qmake
 5. Installer builded only for release version of application.
@@ -67,7 +67,7 @@ If you want to help the project, then you can donate a small amount to our bitco
 3. Создайте проект qmake
 - mkdir example
 - gedit example.pro
-``` qmake
+```qmake
 QT += quick
 CONFIG += c++11
 
