@@ -10,7 +10,7 @@
 3. Create your qmake project
  - mkdir example
  - gedit example.pro 
- ```qmake
+```javascript
 QT += quick
 CONFIG += c++11
 
@@ -67,7 +67,7 @@ If you want to help the project, then you can donate a small amount to our bitco
 3. Создайте проект qmake
 - mkdir example
 - gedit example.pro
-```qmake
+```javascript
 QT += quick
 CONFIG += c++11
 
