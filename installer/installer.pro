@@ -45,7 +45,6 @@ win32 {
 
 unix {
     installerApp.commands += $$LINUXDEPLOY $$PWD/packages/app/data/* -qmldir=$$QML_DIR -qmake=$$QMAKE_QMAKE -verbose=2 &&
-
     commands += "rm -rdf $$PWD/packages/app/data"
 
 }
@@ -58,6 +57,13 @@ mac {
 
 installerApp.commands += $$QT_DIR/../../../Tools/QtInstallerFramework/3.0/bin/binarycreator --offline-only -c $$PWD/config/config.xml -p $$PWD/packages $$PWD/$$OUT_FILE --verbose
 installerApp.CONFIG += target_predeps no_link combine
+
+
+CONFIG(debug, debug|release): {
+    installerApp.commands = ""
+    message( Selected Debug mode. The installer will not be created )
+
+}
 
 message( installComands = "$$installerApp.commands")
 
