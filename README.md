@@ -45,7 +45,7 @@ message( DEPLOY_FILES = $$DEPLOY_FILES)
 
 ```
 
-4. If you need to build a ready installer, then before installing, make sure to run qmake
+4. In the [targetList.pri](/installer/deploy/targetList.pri) file, you must list the goals for all platforms
 5. Installer builded only for release version of application.
 
 ## Donate
@@ -104,8 +104,8 @@ message( DEPLOY_FILES = $$DEPLOY_FILES)
 
 ```
 
-4. Если вам нужно построить готовый установщик, перед установкой обязательно запустите qmake
-5. Установщик создан только для версии версии приложения.
+4. В файле [targetList.pri](/installer/deploy/targetList.pri) нужно перечислить цели для всех платформ
+5. Установщик будет создан только для релизной версии приложения.
 
 ## Пожертвовать
 Если вы хотите помочь проекту, то вы можете пожертвовать небольшую сумму на наш биткойн-кошелек.
