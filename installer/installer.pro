@@ -1,3 +1,7 @@
+include($$PWD/deploy/targetList.pri)
+include($$PWD/deploy/deployFiles.pri)
+
+
 TEMPLATE = aux
 
 INSTALLER = installerApp
@@ -38,24 +42,24 @@ message( DEPLOY_FILES = $$DEPLOY_FILES)
 
 # todo get inpot files
 win32 {
-    installerApp.commands += $$WINDEPLY --qmldir $$QML_DIR * &&
-    commands += "rd  /s /q  $$PWD/packages/app/data"
-
+    for(command, TARGET_LIST) {
+        installerApp.commands += $$WINDEPLY --qmldir $$QML_DIR $$TARGET_PATH/$$command &&
+    }
 }
 
 unix {
-    installerApp.commands += $$LINUXDEPLOY $$PWD/packages/app/data/* -qmldir=$$QML_DIR -qmake=$$QMAKE_QMAKE -verbose=2 &&
-    commands += "rm -rdf $$PWD/packages/app/data"
-
+    for(command, TARGET_LIST) {
+        installerApp.commands += $$LINUXDEPLOY $$TARGET_PATH/$$command -qmldir=$$QML_DIR -qmake=$$QMAKE_QMAKE -verbose=2 &&
+    }
 }
 
-mac {
-    installerApp.commands += $$MACDEPLY --qmldir $$QML_DIR $$DEPLOY_FILES &&
-    commands += "rm -rdf  $$PWD/packages/app/data"
-
+macx {
+    for(command, TARGET_LIST) {
+        installerApp.commands += $$MACDEPLY --qmldir $$QML_DIR $$TARGET_PATH/$$command &&
+    }
 }
 
-installerApp.commands += $$QT_DIR/../../../Tools/QtInstallerFramework/3.0/bin/binarycreator --offline-only -c $$PWD/config/config.xml -p $$PWD/packages $$PWD/$$OUT_FILE --verbose
+installerApp.commands += $$QT_DIR/../../../Tools/QtInstallerFramework/3.0/bin/binarycreator --offline-only -c $$PWD/config/config.xml -p $$PWD/packages $$PWD/$$OUT_FILE --verbose -f
 installerApp.CONFIG += target_predeps no_link combine
 
 
@@ -86,3 +90,4 @@ DISTFILES += \
     packages/app/meta/installscript.js \
     packages/app/meta/package.xml \
     packages/app/meta/ru.ts
+

@@ -36,6 +36,7 @@ Component.prototype.createOperations = function()
         console.log("create icons!!!");
 
         if (systemInfo.kernelType === "winnt") {
+
             console.log("create icons!!! on Windows");
             component.addOperation("CreateShortcut",
                                    "@TargetDir@/@Name@.exe",

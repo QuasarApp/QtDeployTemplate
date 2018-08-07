@@ -1,7 +1,9 @@
 TEMPLATE = subdirs
-CONFIG+=ordered
+CONFIG += ordered
 
-DEPLOY_FILES = ""
+include($$PWD/installer/deploy/deployFiles.pri)
+message( DEPLOY_FILES_MASTER = $$DEPLOY_FILES)
+
 
 SUBDIRS += example \
            installer
