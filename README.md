@@ -45,7 +45,7 @@ message( DEPLOY_FILES = $$DEPLOY_FILES)
 
 ```
 
-4. In the [targetList.pri](installer/deploy/targetsList.pri) file, you must list the goals for all platforms
+4. In the [targetList.pri](/installer/deploy/targetList.pri) file, you must list the goals for all platforms
 5. Installer builded only for release version of application.
 
 ## Donate
@@ -104,7 +104,7 @@ message( DEPLOY_FILES = $$DEPLOY_FILES)
 
 ```
 
-4. В файле [targetList.pri](installer/deploy/targetsList.pri) нужно перечислить цели для всех платформ
+4. В файле [targetList.pri](/installer/deploy/targetList.pri) нужно перечислить цели для всех платформ
 5. Установщик будет создан только для релизной версии приложения.
 
 ## Пожертвовать
