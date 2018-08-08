@@ -50,6 +50,8 @@ win32 {
 unix {
     for(command, TARGET_LIST) {
         installerApp.commands += $$LINUXDEPLOY $$TARGET_PATH/$$command -qmldir=$$QML_DIR -qmake=$$QMAKE_QMAKE -verbose=2 &&
+        commands += "chmod +x $$LINUXDEPLOY"
+
     }
 }
 
@@ -63,17 +65,12 @@ installerApp.commands += $$QT_DIR/../../../Tools/QtInstallerFramework/3.0/bin/bi
 installerApp.CONFIG += target_predeps no_link combine
 
 
-CONFIG(debug, debug|release): {
-    installerApp.commands = ""
-    message( Selected Debug mode. The installer will not be created )
 
-}
 
 message( installComands = "$$installerApp.commands")
 
 commands += "$$LUPDATE $$PWD/packages/app/meta/installscript.js -ts $$PWD/packages/app/meta/ru.ts"
 commands += "$$LRELEASE $$PWD/packages/app/meta/ru.ts"
-commands += "chmod +x $$LINUXDEPLOY"
 
 for(command, commands) {
     system($$command)|error("Failed to run: $$command")
