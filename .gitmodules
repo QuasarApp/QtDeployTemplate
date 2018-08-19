@@ -1,0 +1,3 @@
+[submodule "CQtDeployer"]
+	path = CQtDeployer
+	url = git@github.com:QuasarApp/Console-QtDeployer.git
