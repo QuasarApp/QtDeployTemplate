@@ -9,11 +9,13 @@ SUBDIRS += CQtDeployer \
         example
 
 
-CONFIG(release, debug|release): {
+!android: {
 
-    SUBDIRS += installer
-
-} else {
-    message( Selected Debug mode. The installer will not be created )
-
+    CONFIG(release, debug|release): {
+        SUBDIRS += installer
+    } else {
+        message( Selected Debug mode. The installer will not be created )
+    }
 }
+
+
