@@ -51,7 +51,6 @@ unix {
     for(command, TARGET_LIST) {
         installerApp.commands += $$LINUXDEPLOY -bin $$TARGET_PATH/$$command -qmlDir $$QML_DIR -qmake $$QMAKE_QMAKE &&
     }
-    commands += "chmod +x $$LINUXDEPLOY"
 }
 
 macx {

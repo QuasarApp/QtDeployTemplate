@@ -33,6 +33,10 @@ ui_*.h
 Makefile*
 *build-*
 installer/packages/app/data/*
+*.snap
+installer/packages/app/parts/
+installer/packages/app/prime/
+installer/packages/app/stage/
 
 # Qt unit tests
 target_wrapper.*
