@@ -22,4 +22,4 @@ parts:
     plugin: dump
     source: data/
 
-    after: [desktop-qt5]
+    after: [desktop-glib-only]
