@@ -41,7 +41,10 @@ message( LRELEASE = $$LRELEASE)
 message( DEPLOY_FILES = $$DEPLOY_FILES)
 
 # todo get inpot files
+message( TARGET_LIST = $$TARGET_LIST)
+
 win32 {
+
     for(command, TARGET_LIST) {
         installerApp.commands += $$WINDEPLY --qmldir $$QML_DIR $$TARGET_PATH/$$command &&
     }
@@ -49,7 +52,7 @@ win32 {
 
 unix {
     for(command, TARGET_LIST) {
-        snapApp.commands += $$LINUXDEPLOY clear -bin $$TARGET_PATH/$$command -qmlDir $$QML_DIR -qmake $$QMAKE_QMAKE &&
+        installerApp.commands += $$LINUXDEPLOY clear -bin $$TARGET_PATH/$$command -qmlDir $$QML_DIR -qmake $$QMAKE_QMAKE &&
     }
 }
 
