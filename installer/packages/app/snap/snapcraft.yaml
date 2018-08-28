@@ -22,4 +22,29 @@ parts:
     plugin: dump
     source: data/
 
+    after: [libs]
+  libs:
+    plugin: nil
+    stage-packages:
+      # Here for the plugins-- they're not linked in automatically.
+      - libx11-xcb1
+      - libglu1-mesa
+      - libxrender1
+      - libxi6
+      - libegl1-mesa
+      - fontconfig
+      - libgl1-mesa-dri
+      - libxkbcommon0
+      - ttf-ubuntu-font-family
+      - dmz-cursor-theme
+      - light-themes
+      - adwaita-icon-theme
+      - gnome-themes-standard
+      - shared-mime-info
+      - libgdk-pixbuf2.0-0
+      - try: [appmenu-qt5] # not available on core18
+      - locales-all
+      - xdg-user-dirs
+
     after: [desktop-glib-only]
+
