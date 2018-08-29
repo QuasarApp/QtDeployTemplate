@@ -14,15 +14,17 @@ snapApp.output = $$SNAPCRAFT
 LINUXDEPLOY = $$PWD/../../../CQtDeployer/build/CQtDeployer
 
 QT_DIR = $$dirname(QMAKE_QMAKE)
-QML_DIR = $$QT_DIR/../qml
+QML_DIR = $$PWD/../../../example
 
 unix {
     message($$DESTDIR);
     message($$TARGET_LIST);
 
     for(command, TARGET_LIST) {
-        snapApp.commands += $$LINUXDEPLOY -bin $$TARGET_PATH/$$command -qmlDir $$QML_DIR -qmake $$QMAKE_QMAKE &&
+        snapApp.commands += $$LINUXDEPLOY clear -bin $$TARGET_PATH/$$command -qmlDir $$QML_DIR -qmake $$QMAKE_QMAKE &&
     }
+
+    snapApp.commands += chmod a+rx $$TARGET_PATH/AppRun.sh &&
 
     snapApp.commands += $$DESTDIR/$$SNAPCRAFT
     snapApp.CONFIG += target_predeps no_link combine
